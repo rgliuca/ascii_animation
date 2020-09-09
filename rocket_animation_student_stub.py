@@ -34,7 +34,7 @@ if os.name =="nt":
     ci.visible = False
     ctypes.windll.kernel32.SetConsoleCursorInfo(handle, ctypes.byref(ci))
     
-
+print(Fore.GREEN + '\033[1;15H'+'Hello World')
   
 for i in range(1,10):
   print(Fore.GREEN + '\033[{};15H'.format(i)+'Hello World')
