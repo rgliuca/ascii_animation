@@ -1,8 +1,10 @@
+import msvcrt
 import os, sys
 import random
 from time import sleep
 from colorama import Fore, Back, Style, init 
 from getkey import getch  
+
 
 init()  
 
@@ -18,7 +20,6 @@ car_col=20
 if os.name =="nt": 
     os.system("cls")
     
-    import msvcrt
     import ctypes
 
     class _CursorInfo(ctypes.Structure):
@@ -32,3 +33,12 @@ if os.name =="nt":
 
 for n, line in enumerate(car):
   print(Fore.RED+'\033[{};{}H'.format(car_row+n, car_col)+' '+line+' ')
+
+while True:
+  if msvcrt.kbhit():
+      c=msvcrt.getch()
+      if c==b'\xe0':
+        c=msvcrt.getch()
+        print(c)
+  sleep(0.03)
+ 
