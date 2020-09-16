@@ -8,6 +8,10 @@ from getkey import getch
 
 init()  
 
+boulder=[ ' O ',
+          'OOO',
+          ' O ']
+
 car=[ 'Ö▓▓▓▓▓Ö',
       ' ▓▓░▓▓ ',
       ' ▓░Ö░▓ ',
