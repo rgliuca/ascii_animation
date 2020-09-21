@@ -3,7 +3,7 @@ import os, sys
 import random
 from time import sleep
 from colorama import Fore, Back, Style, init 
-from getkey import getch  
+#from getkey import getch  
 
 
 init()  
