@@ -1,6 +1,6 @@
 import os, sys
 from time import sleep
-from colorama import Fore, Back, Style, init 
+from colorama import Fore, init
   
 init() 
 
@@ -34,13 +34,12 @@ if os.name =="nt":
     ci.visible = False
     ctypes.windll.kernel32.SetConsoleCursorInfo(handle, ctypes.byref(ci))
     
-print(Fore.GREEN + '\033[1;15H'+'Hello World')
+print(Fore.GREEN + f'\033[{1};{15}H'+'Hello World')
   
 for i in range(1,10):
-  print(Fore.GREEN + '\033[{};15H'.format(i)+'Hello World')
+  print(Fore.GREEN + f'\033[{i};{15}H' + 'Hello World')
   sleep(1)
 
 for i in range(1,10):
-  print(Fore.RED + '\033[{};15H'.format(i)+'Hello World')
+  print(Fore.RED + f'\033[{i};{15}H' + 'Hello World')
   sleep(1)
-
