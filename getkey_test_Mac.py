@@ -38,3 +38,8 @@ while True:
     print(c[0], ":", ord(c[0]))
     if ord(c[0]) == 3:
         break
+        
+    if ord(c[0]) == 49:
+        print("The '1' key was pressed")
+        # most likely the '1' key was pressed
+
