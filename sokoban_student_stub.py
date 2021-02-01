@@ -30,6 +30,9 @@ def print_wall():
     pass
 
 def print_board(board):
+    row = 10
+    col = 15
+    #print(Fore.RED + f'\033[{row};{col}H' + 'Hello World')
     pass
 
 def move_object(board, row, col, direction, obj):
