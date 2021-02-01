@@ -5,8 +5,8 @@ from enum import Enum
 from colorama import Fore, Back, Style, init 
 
 TOTAL_GOALS = 3
-BOARD_POS_ROW = 5
-BOARD_POS_COL = 20 
+BOARD_DISP_ROW = 5
+BOARD_DISP_COL = 20 
 BOARD_WIDTH = 16
 BOARD_HEIGHT = 8 
 BLANK_IMG = ' '
