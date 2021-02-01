@@ -4,16 +4,16 @@ import os, sys, time
 from enum import Enum
 from colorama import Fore, Back, Style, init 
 
-TOTAL_BOXES = 3
+TOTAL_GOALS = 3
 BOARD_POS_ROW = 5
 BOARD_POS_COL = 20 
 BOARD_WIDTH = 16
 BOARD_HEIGHT = 8 
-blank = ' '
-block = '▓'
-box = 'X'
-smiley = 'Ö' # player
-wall = '▒'
+BLANK_IMG = ' '
+BLOCK_IMG = '▓'
+GOAL_IMG = 'X'
+PLAYER_IMG = 'Ö' # player
+WALL_IMG = '▒'
 game_board = [[blank] * BOARD_WIDTH for _ in range(BOARD_HEIGHT)]
 
 class Direction(Enum):
