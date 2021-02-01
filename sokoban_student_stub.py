@@ -14,7 +14,7 @@ BLOCK_IMG = '▓'
 GOAL_IMG = 'X'
 PLAYER_IMG = 'Ö' # player
 WALL_IMG = '▒'
-game_board = [[blank] * BOARD_WIDTH for _ in range(BOARD_HEIGHT)]
+game_board = [[BLANK_IMG] * BOARD_WIDTH for _ in range(BOARD_HEIGHT)]
 
 class Direction(Enum):
     UP = 1
