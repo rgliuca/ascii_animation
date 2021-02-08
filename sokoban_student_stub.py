@@ -44,6 +44,16 @@ def move_object(board, row, col, direction, obj):
     '''
     pass
 
+def get_object(board, row, col):
+    '''
+    Returns the object occupied in the given pos (row, col)
+    If the pos (row, col) is out of bounds, the wall is returned!
+    '''
+    # If the pos (row, col) is out of bounds, the wall is returned!
+    # If the pos (row, col) is a box, return the box text
+    # if the pos (row, col) is empty, return the empty img
+    # If the pos (row, col) is goal, return the goal img
+    
 # for windows OS 
 os.system("cls")
 
