@@ -31,6 +31,9 @@ if os.name == "nt":
 else:
     print(f"\033[2J ")
 
+colors = [Fore.BLUE, Fore.BLUE, Fore.CYAN, Fore.GREEN, Fore.MAGENTA, 
+          Fore.LIGHTBLUE_EX, Fore.LIGHTCYAN_EX, Fore.LIGHTCYAN_EX,
+          Fore.LIGHTGREEN_EX, Fore.LIGHTMAGENTA_EX, Fore.LIGHTRED_EX]
 
 if __name__ == "__main__":
     pass
