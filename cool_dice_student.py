@@ -31,9 +31,29 @@ if os.name == "nt":
 else:
     print(f"\033[2J ")
 
-colors = [Fore.BLUE, Fore.BLUE, Fore.CYAN, Fore.GREEN, Fore.MAGENTA, 
-          Fore.LIGHTBLUE_EX, Fore.LIGHTCYAN_EX, Fore.LIGHTCYAN_EX,
-          Fore.LIGHTGREEN_EX, Fore.LIGHTMAGENTA_EX, Fore.LIGHTRED_EX]
+
+class Dice:
+    def __init__(self, row=1, col=1, color=Fore.RED):
+        pass
+    
+    def roll(self):
+        pass
+
+    def set_color(self, color):
+        pass
+
+    def set_position(self, row, column):
+        pass
+
+    def print(self):
+        pass
+
+    '''
+    You don't need to implement __str__ method for now
+    '''
+    def __str__(self):
+        pass
+
 
 if __name__ == "__main__":
     pass
