@@ -5,8 +5,8 @@ from time import sleep
 from colorama import Fore, Back, Style, init 
 from enum import Enum
 
-CAR_ROW = 40
-CAR_COL = 40
+ROVER_ROW = 40
+ROVER_COL = 40
 SCREEN_HEIGHT = 50
 SCREEN_WIDTH = 100
 TEXT_POS = '\033[{};{}H'
@@ -36,7 +36,7 @@ class Missile:
     image = MISSILE_IMAGE
 
     def __init__(self, pos, pos_limits = {'min_row': 2, 
-                                          'max_row': CAR_ROW,
+                                          'max_row': ROVER_ROW,
                                           'min_col': 1,
                                           'max_col': SCREEN_WIDTH}):
         pass
@@ -63,21 +63,29 @@ class Rover:
     image = ROVER_IMAGE
     color = ROVER_COLOR
 
-    def __init__(self, pos = (CAR_ROW, CAR_COL), \
-            pos_limits = {'min_row': 1, 'max_row': CAR_ROW, \
+    def __init__(self, rover_row=ROVER_ROW, rover_col=ROVER_COL), \
+            pos_limits = {'min_row': 1, 'max_row': ROVER_ROW, \
                           'min_col': 1, 'max_col': SCREEN_WIDTH}): 
+        # self._row = rover_row
         pass
 
 
     def draw(self):
+        # draw the rover at the correct location (self._row, self._col)
         pass
 
 
     def clear(self):
+        # clears the rover from the screen
+        # print("          ")  # print however many lines to clear the rover from the screen
         pass
 
 
     def move(self, direction):
+        # is going to 
+        # 1. call clear() to clear the rover from the screen
+        # 2. change the rover's position (left, right, up, down) make changes to self._row or self._col
+        # 3. call draw() to print the rover in the new position
         pass
 
     def has_collided(self, other):
