@@ -63,9 +63,7 @@ class Rover:
     image = ROVER_IMAGE
     color = ROVER_COLOR
 
-    def __init__(self, rover_row=ROVER_ROW, rover_col=ROVER_COL), \
-            pos_limits = {'min_row': 1, 'max_row': ROVER_ROW, \
-                          'min_col': 1, 'max_col': SCREEN_WIDTH}): 
+    def __init__(self, rover_row=ROVER_ROW, rover_col=ROVER_COL): 
         # self._row = rover_row
         pass
 
