@@ -6,14 +6,14 @@ from colorama import Fore, Back, Style, init
 
 init()  
 
-boulder = [' O ',
-           'OOO',
-           ' O ']
+BOULDER_IMAGE = [' O ',
+                 'OOO',
+                 ' O ']
 
-car = ['Ö▓▓▓▓▓Ö',
-       ' ▓▓░▓▓ ',
-       ' ▓░Ö░▓ ',
-       'Ö▓▓▓▓▓Ö']
+ROVER_IMAGE = ['Ö▓▓▓▓▓Ö',
+               ' ▓▓░▓▓ ',
+               ' ▓░Ö░▓ ',
+               'Ö▓▓▓▓▓Ö']
     
 rover_row = 15
 rover_col = 20
@@ -24,7 +24,7 @@ if os.name == "nt":
 else:
     print(f"\033[2J ")
 
-print("\033[?25l") # Hide curso
+print("\033[?25l") # Hide the cursor
 
 try:
     import tty, termios
@@ -58,7 +58,7 @@ else:
         return ch
 
 
-for n, line in enumerate(car):
+for n, line in enumerate(ROVER_IMAGE):
     print(Fore.RED+'\033[{};{}H'.format(rover_row + n, rover_col) + line)
 
 while True:
