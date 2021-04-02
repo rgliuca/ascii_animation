@@ -117,6 +117,19 @@ class TetrisBlock:
         pass
 
 
+class TermPos:
+    def __init__(self, row, col):
+        self._row = row
+        self._col = col
+    
+    def __str__(self):
+        return f"\033[{self._row};{self._col}H"
+
+    def __add__(self, other):
+        return str(self) + str(other)
+
+    def __radd__(self, other):
+        return self + other
 
 
 if __name__ == "__main__":
