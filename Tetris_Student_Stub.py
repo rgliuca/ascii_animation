@@ -117,64 +117,6 @@ class TetrisBlock:
         pass
 
 
-class TetrisBoard:
-    ''' 
-    1. contains the blocks 
-    2. knows the game screen dimension
-    3. animates the screen
-    4. removes the bottom line when they're completely filled 
-        will remove up to the line that's not completely filled
-    
-    Implementation:
-    1. dropped_blocks (a list of the blocks fallen to the bottom of the screen)
-        - This list of blocks should be converted to raster images (for each line)
-        - Sinc there's no rotation.  BUT, the "gaps" in the line can be filled
-          by falling blocks
-    2. falling_block: the block that's animating (falling) in the middle of the screen
-    '''
-    def __init__(
-        self, 
-        board_pos=(BOARD_ROW, BOARD_COL), 
-        board_dimension=(BOARD_HEIGHT, BOARD_WIDTH),
-        animation_delay=ANIMATION_DELAY):
-        pass
-
-    def play(self):
-        pass
-
-    def animate(self):
-        '''
-        1. animate the falling block down by one line
-        2. clear the last rows (if more than one)
-        '''
-        pass
-
-    def __str__(self):
-        '''
-        returns the text image of the board
-        '''
-        s = ""
-        return s
-
-class Tetris:
-    '''
-    owns 1. board
-    plays the game
-    '''
-    def __init__(self):
-        # creates a new board TetrisBoard
-        # prints the board on the screen
-        pass
-
-    def play(self):
-        '''
-        Plays the tetris game
-
-        1. checks for keyboard input: cursor up, down, left, right
-            - calls TetrisBoard to play(direction)
-        2. if no input, after a certain period, calls TetrisBoard.animate()
-        '''
-        pass
 
 
 if __name__ == "__main__":
