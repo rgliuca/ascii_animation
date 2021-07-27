@@ -14,6 +14,14 @@ def clear_screen():
 
     # Action
     system_call([command])
+    
+class TermPos:
+    def __init__(self, row, col):
+        self._row = row
+        self._col = col
+    
+    def __str__(self):
+        return f"\033[{self._row};{self._col}H"
 
 init() 
 
@@ -47,12 +55,15 @@ if os.name =="nt":
     ci.visible = False
     ctypes.windll.kernel32.SetConsoleCursorInfo(handle, ctypes.byref(ci))
     
-print(Fore.GREEN + f'\033[{1};{15}H'+'Hello World')
+#print(Fore.GREEN + f'\033[{1};{15}H'+'Hello World')
+print(Fore.GREEN + TermPos(1, 15) +'Hello World')
+
   
 for i in range(1,10):
-  print(Fore.GREEN + f'\033[{i};{15}H' + 'Hello World')
+  #print(Fore.GREEN + f'\033[{i};{15}H' + 'Hello World')
+  print(Fore.GREEN + TermPos(i, 15) + 'Hello World')
   sleep(1)
 
 for i in range(1,10):
-  print(Fore.RED + f'\033[{i};{15}H' + 'Hello World')
+  print(Fore.RED + TermPos(i, 15) + 'Hello World')
   sleep(1)
