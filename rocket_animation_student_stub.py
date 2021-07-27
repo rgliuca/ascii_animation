@@ -61,13 +61,11 @@ if os.name =="nt":
     ctypes.windll.kernel32.GetConsoleCursorInfo(handle, ctypes.byref(ci))
     ci.visible = False
     ctypes.windll.kernel32.SetConsoleCursorInfo(handle, ctypes.byref(ci))
-    
-#print(Fore.GREEN + f'\033[{1};{15}H'+'Hello World')
+
 print(Fore.GREEN + TermPos(1, 15) +'Hello World')
 
   
 for i in range(1,10):
-  #print(Fore.GREEN + f'\033[{i};{15}H' + 'Hello World')
   print(Fore.GREEN + TermPos(i, 15) + 'Hello World')
   sleep(1)
 
