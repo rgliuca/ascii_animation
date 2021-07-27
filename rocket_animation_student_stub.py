@@ -22,6 +22,13 @@ class TermPos:
     
     def __str__(self):
         return f"\033[{self._row};{self._col}H"
+   
+    def __add__(self, other):
+        return str(self) + str(other)
+
+    def __radd__(self, other):
+        return self + other
+
 
 init() 
 
